@@ -23,12 +23,12 @@ int main(int argc, char *argv[])
     {
         printf("Connect failed\n");
     }
-    char test[BUF_SIZE] = "POST /eventCtl.h HTTP/1.1\r\n"
+    char test[BUF_SIZE] = "GET /eventCtl.h HTTP/1.1\r\n"
                           "Accept: *\r\n"
                           "\r\n";
-    FILE *fp = fopen("../eventCtl.h", "rb");
-    size_t fileSize = getFileSize(fp);
-    fread(test + strlen(test), fileSize, 1, fp);
+    //FILE *fp = fopen("../eventCtl.h", "rb");
+    //size_t fileSize = getFileSize(fp);
+    //fread(test + strlen(test), fileSize, 1, fp);
     char data[BUF_SIZE];
     printf("%s\n", test);
     send(client_sock, test, strlen(test), 0);
