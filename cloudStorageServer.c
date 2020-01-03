@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     init_listen_socket(g_efd, port);  //初始化监听socket
 
     init();
-
+    
     epoll_event_t events[MAX_EVENTS + 1]; // epoll_event缓冲区
     memset(events, 0, (MAX_EVENTS + 1) * sizeof(struct epoll_event));  // 初始化缓冲区
 
