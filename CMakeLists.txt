@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.0.0)
 project(CloudStorageServer C)
 
 set(CMAKE_C_STANDARD 11)
